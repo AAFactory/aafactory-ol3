@@ -1,0 +1,299 @@
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Awesome Application Factory
+// openlayers custom css
+// 
+//    * icon color: 383032
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@font-face {
+    font-family: 'nanumgothic';
+    /* src: url('/nanumgothic.ttf') format('truetype') */
+    src: url('./fonts/nanumgothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nanumgothic_bold';
+    src: url('./fonts/nanumgothic_bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body { 
+    margin: 0px;
+    font-family: 'nanumgothic_bold';
+}
+
+.aaf-measure-segment {
+	border: 1px solid black;
+	background-color: white;
+	padding-left: 3px;
+	padding-right: 3px;
+	font-family: 'Gulim';
+	font-size: 9pt;
+	line-height: 19px;
+	cursor: default;
+}
+
+.aaf-measure-total {
+	margin-top: 10px;
+	margin-left: 7px;
+	border: 1px solid black;
+	background-color: white;
+	padding-left: 3px;
+	padding-right: 3px;
+	font-family: 'Gulim';
+	font-size: 9pt;
+	line-height: 19px;
+	cursor: default;
+	z-index: 8888;
+}
+
+.aaf-measure-close {
+	margin-left: 7px;
+	font-family: 'Gulim';
+	width: 16px;
+	height: 16px;
+	font-size: 9pt;
+	line-height: 19px;
+	z-index: 8888;
+	background: white;
+}
+
+.aaf-measure-close a {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	background: url('images/close-window-16.png') no-repeat top left;
+	cursor: pointer;
+	z-index: 8888;
+}
+
+.aaf-measure-move {
+	margin-left: 5px;
+	margin-top: 5px;
+	width: 100px;
+	height: 38px;
+	border: 1px solid black;
+	background-color: white;
+	padding-left: 3px;
+	padding-right: 3px;
+	font-family: 'Gulim';
+	font-size: 9pt;
+	line-height: 19px;
+	z-index: 9999;
+	cursor: default;
+}
+
+.aaf-measure-container {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.aaf-control-icon {
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    border-radius: 25px;
+    background: white;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+.aaf-control-icon img {
+	width: 25px;
+    height: 25px;
+    margin-top: 3px;
+}
+
+.aaf-control-index-top {
+	z-index: 999;
+}
+
+#layerBox {
+	background: white;
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 20px;
+}
+
+#progress {
+	display: none;
+	position: fixed;
+	top: calc(100% / 2 - 80px);	
+	left: calc(100% / 2 - 80px);
+}
+
+#wrapper {
+	width: 100%;
+	position: fixed;
+	bottom: 5px;
+}
+
+#listView {
+	background: white;
+	position: fixed;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	z-index: 2;
+	opacity: 0.9;
+	display: none;
+}
+
+.card {
+	display: inline-block;
+	background-color: rgba(96, 96, 105, 1);
+	padding: 5px;
+	border-radius: 3px;
+	color: white;	
+	cursor: pointer;
+	font-size: 15px;
+}
+
+.layer-on {
+	background-color: rgba(0, 0, 255, 1);
+}
+
+.ol-zoom {
+  top: 12px;
+  left: 12px;
+}
+.ol-toggle-options {
+  z-index: 1000;
+  background: rgba(255,255,255,0.4);
+  border-radius: 4px;
+  padding: 2px;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}
+#updateFilterButton, #resetFilterButton {
+  height: 22px;
+  width: 22px;
+  text-align: center;
+  text-decoration: none !important;
+  line-height: 22px;
+  margin: 1px;
+  font-family: 'Lucida Grande',Verdana,Geneva,Lucida,Arial,Helvetica,sans-serif;
+  font-weight: bold !important;
+  background: rgba(0,60,136,0.5);
+  color: white !important;
+  padding: 2px;
+}
+.ol-toggle-options a {
+  background: rgba(0,60,136,0.5);
+  color: white;
+  display: block;
+  font-family: 'Lucida Grande',Verdana,Geneva,Lucida,Arial,Helvetica,sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  height: 22px;
+  line-height: 11px;
+  margin: 1px;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  width: 22px;
+  border-radius: 2px;
+}
+.ol-toggle-options a:hover {
+  color: #fff;
+  text-decoration: none;
+  background: rgba(0,60,136,0.7);
+}
+/* Toolbar styles */
+#toolbar {
+    position: relative;
+    padding-bottom: 0.5em;
+}
+#toolbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#toolbar ul li {
+    float: left;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+}
+#toolbar ul li a {
+    font-weight: bold;
+    font-size: smaller;
+    vertical-align: middle;
+    color: black;
+    text-decoration: none;
+}
+#toolbar ul li a:hover {
+    text-decoration: underline;
+}
+#toolbar ul li * {
+    vertical-align: middle;
+}
+#map {
+    clear: both;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#location {
+	display: inline-block;
+	margin-left: 20px;
+}
+#scale {
+	display: inline-block;
+}
+/* Styles used by the default GetFeatureInfo output, added to make IE happy */
+table.featureInfo, table.featureInfo td, table.featureInfo th {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    font-size: 90%;
+    padding: .2em .1em;
+}
+table.featureInfo th {
+    padding: .2em .2em;
+    font-weight: bold;
+    background: #eee;
+}
+table.featureInfo td {
+    background: #fff;
+}
+table.featureInfo tr.odd td {
+    background: #eee;
+}
+table.featureInfo caption {
+    text-align: left;
+    font-size: 100%;
+    font-weight: bold;
+    padding: .2em .2em;
+}
+
+#overviewMap {
+	width: 50px;
+	height: 50px;
+}
+
+#popup {
+	background: white;
+}
+#toolbox {
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	z-index: 1;
+}
+#toolbox button {
+	width: 25px;
+	height: 25px;
+}
+.ol3-21-popup-window {
+	background: white;
+}
