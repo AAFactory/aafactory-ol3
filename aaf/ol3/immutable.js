@@ -15,9 +15,36 @@ aafactory.ol3.immutable.projection3857 = new ol.proj.Projection({
     extent:[-20037508.342789244, -20037508.342789244, 20037508.342789244, 20037508.342789244] // projection extent 값을  지정해야 모든 tile origin 값이 동일하게 계산됨   
 });
 
+aafactory.ol3.immutable.sido = [
+    {type: 1, id: 'sidoLayer1', name: '서울', subPath: 'sido/11.geojson'},
+    {type: 1, id: 'sidoLayer9', name: '경기도', subPath: 'sido/41.geojson'},
+    {type: 2, id: 'highway1', name: '경부고속도로', subPath: 'highway/경부고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway2', name: '경인고속도로', subPath: 'highway/경인고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway3', name: '광주원주고속도로', subPath: 'highway/광주원주고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway4', name: '동해고속도로(부산-울산)', subPath: 'highway/동해고속도로(부산-울산)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway5', name: '동해고속도로(삼척-속초)', subPath: 'highway/동해고속도로(삼척-속초)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway6', name: '동해고속도로(울산-포항)', subPath: 'highway/동해고속도로(울산-포항)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway7', name: '서울양양고속도로', subPath: 'highway/서울양양고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway8', name: '서해안고속도로', subPath: 'highway/서해안고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway9', name: '세종포천고속도로(구리-포천)', subPath: 'highway/세종포천고속도로(구리-포천)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway10', name: '제2경인고속도로(안양-성남)', subPath: 'highway/영동고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway11', name: '영동고속도로', subPath: 'highway/영동고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway12', name: '제2경인고속도로(인천대교)', subPath: 'highway/제2경인고속도로(인천대교)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway13', name: '제2중부고속도로', subPath: 'highway/제2중부고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway14', name: '중부고속도로', subPath: 'highway/중부고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway15', name: '중부내륙고속도로', subPath: 'highway/중부내륙고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway16', name: '중부내륙고속도로지선', subPath: 'highway/중부내륙고속도로지선_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway17', name: '중앙고속도로(부산-대구)', subPath: 'highway/중앙고속도로(부산-대구)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway18', name: '중앙고속도로(삼락-대동)', subPath: 'highway/중앙고속도로(삼락-대동)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway19', name: '중앙고속도로(춘천-금호)', subPath: 'highway/중앙고속도로(춘천-금호)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway20', name: '통영대전고속도로', subPath: 'highway/통영대전고속도로_EPSG4326.geojson.', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway21', name: '호남고속도로', subPath: 'highway/호남고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, id: 'highway22', name: '광주대구고속도로', subPath: 'highway/광주대구고속도로.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+];
+
 aafactory.ol3.immutable.vworldTile = {
         base: new ol.layer.Tile({
-            visible : true,
+            visible : false,
             source : new ol.source.XYZ({
                 url : 'http://xdworld.vworld.kr:8080/2d/Base/service/{z}/{x}/{y}.png'
             }),
@@ -31,13 +58,42 @@ aafactory.ol3.immutable.vworldTile = {
             name: 'midnight'
         }),
         gray: new ol.layer.Tile({
-            visible : false,
+            visible : true,
             source : new ol.source.XYZ({
                 url : 'http://xdworld.vworld.kr:8080/2d/gray/service/{z}/{x}/{y}.png'
             }),
             name: 'gray'
         })
 }
+aafactory.ol3.immutable.roadStyle = [
+    new ol.style.Style({
+        stroke: new ol.style.Stroke({
+            color: 'rgba(0, 0, 255, 0.5)',
+            width: 5
+        })
+    }),
+    new ol.style.Style({
+        stroke: new ol.style.Stroke({
+            color: 'rgba(255, 255, 255, 0)',
+            width: 5
+        }),
+        text: new ol.style.Text({
+            font: '12px Calibri,sans-serif',
+            fill: new ol.style.Fill({
+                color: '#000'
+            }),
+            overflow: false,
+            maxangle: 30,
+            placement : 'line',
+            align: 'center',
+            textBaseline: 'bottom',
+            stroke: new ol.style.Stroke({
+                color: '#fff',
+                width: 3
+            })
+        })
+    })
+];
 
 aafactory.ol3.immutable.boundaryStyle = new ol.style.Style({
     fill: new ol.style.Fill({
@@ -45,7 +101,7 @@ aafactory.ol3.immutable.boundaryStyle = new ol.style.Style({
     }),
     stroke: new ol.style.Stroke({
         color: '#000000',
-        width: 3
+        width: 2
     }),
     text: new ol.style.Text({
         font: '15px nanumgothic_bold',

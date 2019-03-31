@@ -10,7 +10,7 @@ $(function() {
             attribution : false
         }).extend([ new ol.control.ScaleLine() ]),
         target : 'map',
-        layers : [ vworldTile.base, vworldTile.midnight, vworldTile.gray, bemdLayer, sidoLayer9],
+        layers : [ vworldTile.base, vworldTile.midnight, vworldTile.gray, bemdLayer],
         view : new ol.View({
             projection : aafactory.ol3.immutable.projection3857
         })
@@ -36,6 +36,23 @@ $(function() {
     // resize event handler
     $(window).resize(containerResizeHandler);
     containerResizeHandler();
+    
+    // 레이어추가
+    var container = document.getElementById('layerBox');
+    aafactory.ol3.immutable.sido.forEach(function(item) {
+        var div = document.createElement('div');
+        div.className = "card layer-on dynamicDiv";
+        div.id = item.id;
+        div.innerHTML = item.name;
+        container.appendChild(div);
+        if (item.type == 1) {
+            map.addLayer(aafactory.ol3.extension.createSDLayer(item.subPath, item.id));    
+        } else {
+            map.addLayer(aafactory.ol3.extension.createRoadLayer(item.subPath, item.id, item.color));
+        }
+    })
+    
+    bindLayerEvent();
 });
 
 var containerResizeHandler = function() {
@@ -51,68 +68,42 @@ var containerResizeHandler = function() {
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /// Layer 초기화
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-var sidoLayer9 = aafactory.ol3.extension.createSDLayer('sido/41.geojson', 'sidoLayer9');  // 경기도
 var bemdLayer = aafactory.ol3.extension.createBEMDLayer();
 
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// Layer박스 제어 이벤트 처리(배경지도 변경)
+// Layer박스 제어 이벤트 처리
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-$("input[name='bgTile']").on('change', function() {
-    vworldTile.base.setVisible(false);
-    vworldTile.midnight.setVisible(false);
-    vworldTile.gray.setVisible(false);
-    console.log($(this).attr('flag'))
-    switch($(this).attr('flag')) {
-    case 'base':
-        vworldTile.base.setVisible(true);
-        break;
-    case 'midnight':
-        vworldTile.midnight.setVisible(true);
-        break;
-    case 'gray':
-        vworldTile.gray.setVisible(true);
-        break;
-    default:
-        break;
-    }
-});
-
-//$('.layer').on('click', function() {
-//	$box = $(this);
-//	map.getLayers().forEach(function(item, idx) { 
-//		if (item.get('name') == $box.attr('name')) item.setVisible($box.prop("checked"));
-//	});
-//});
-
-$('.card').on('click', function() {
-    var $target = $(this); 
-    var layerName = $target.attr('id');
-    map.getLayers().forEach(function(item, idx) {
-        if (layerName == item.get('name')) {
-            if ($target.hasClass('layer-on')) {
-                $target.removeClass('layer-on');
-                item.setVisible(false);
-            } else {
-                if (layerName == 'base' || layerName == 'midnight' || layerName == 'gray') {
-                    vworldTile.base.setVisible(false);
-                    vworldTile.midnight.setVisible(false);
-                    vworldTile.gray.setVisible(false);
-                    $('#base').removeClass('layer-on');
-                    $('#midnight').removeClass('layer-on');
-                    $('#gray').removeClass('layer-on');
+var bindLayerEvent = function() {
+    $('.card').on('click', function() {
+        var $target = $(this); 
+        var layerName = $target.attr('id');
+        map.getLayers().forEach(function(item, idx) {
+            if (layerName == item.get('name')) {
+                if ($target.hasClass('layer-on')) {
+                    $target.removeClass('layer-on');
+                    item.setVisible(false);
                 } else {
-                    if (item.getSource().getFeatures().length == 0) {
-                        $('#progress').css('display', 'block');
-                        item.on('change', function(e) {
-                            $('#progress').css('display', 'none');
-                        });
+                    if (layerName == 'base' || layerName == 'midnight' || layerName == 'gray') {
+                        vworldTile.base.setVisible(false);
+                        vworldTile.midnight.setVisible(false);
+                        vworldTile.gray.setVisible(false);
+                        $('#base').removeClass('layer-on');
+                        $('#midnight').removeClass('layer-on');
+                        $('#gray').removeClass('layer-on');
+                    } else {
+                        if (item.getSource().getFeatures().length == 0) {
+                            $('#progress').css('display', 'block');
+                            item.on('change', function(e) {
+                                $('#progress').css('display', 'none');
+                            });
+                        }
                     }
+                    $target.addClass('layer-on');
+                    item.setVisible(true);
                 }
-                $target.addClass('layer-on');
-                item.setVisible(true);
-            }
-        } 
+            } 
+        });
     });
-});
+}
 
