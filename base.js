@@ -39,17 +39,27 @@ $(function() {
     
     // 레이어추가
     var container = document.getElementById('layerBox');
+    var previousType = -1;
     aafactory.ol3.immutable.sido.forEach(function(item) {
         var div = document.createElement('div');
-        div.className = "card layer-on dynamicDiv";
         div.id = item.id;
         div.innerHTML = item.name;
-        container.appendChild(div);
+        if (previousType != item.type) container.appendChild(document.createElement('hr'));
+        
         if (item.type == 1) {
+            div.className = "card layer-on dynamicDiv";
             map.addLayer(aafactory.ol3.extension.createSDLayer(item.subPath, item.id));    
         } else {
-            map.addLayer(aafactory.ol3.extension.createRoadLayer(item.subPath, item.id, item.color));
+            if (item.visible) {
+                div.className = "card layer-on dynamicDiv";
+            } else {
+                div.className = "card dynamicDiv";
+            }
+            map.addLayer(aafactory.ol3.extension.createRoadLayer(item.subPath, item.id, item.color, item.visible));
         }
+        
+        container.appendChild(div);
+        previousType = item.type;
     })
     
     bindLayerEvent();

@@ -95,7 +95,7 @@ aafactory.ol3.extension.createSDLayer = function(geoJsonName, name) {
     return layer;
 }
 
-aafactory.ol3.extension.createRoadLayer = function(geoJsonName, name, color) {
+aafactory.ol3.extension.createRoadLayer = function(geoJsonName, name, color, visible) {
     var roadStyle = aafactory.ol3.immutable.roadStyle;
     var layer = new ol.layer.Vector({
         source: new ol.source.Vector({
@@ -108,7 +108,8 @@ aafactory.ol3.extension.createRoadLayer = function(geoJsonName, name, color) {
             return roadStyle;
         },
         declutter: true,
-        name: name
+        name: name,
+        visible: visible 
     });
     return layer;
 }

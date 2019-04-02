@@ -145,12 +145,14 @@ body {
 	z-index: 2;
 	opacity: 0.9;
 	display: none;
+	overflow: auto;
 }
 
 .card {
 	display: inline-block;
+	width: calc(100% / 2 - 35px);
 	background-color: rgba(96, 96, 105, 1);
-	padding: 5px;
+	padding: 15px;
 	border-radius: 3px;
 	color: white;	
 	cursor: pointer;
