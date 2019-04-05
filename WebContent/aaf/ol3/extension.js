@@ -141,3 +141,30 @@ aafactory.ol3.extension.createBEMDLayer = function() {
     
     return layer;
 }
+
+aafactory.ol3.extension.createHEMDLayer = function() {
+    var style = aafactory.ol3.immutable.boundaryStyle;
+    var layer = new ol.layer.Vector({
+        source: new ol.source.Vector({
+            url: 'geojson/emd/hemd.geojson',
+            format: new ol.format.GeoJSON()
+        }),
+        style: function(feature) {
+            style.getText().setText(feature.get('adm_nm'));
+            style.getText().getStroke().setColor('rgba(255, 255, 255, 1)');
+            style.getText().getFill().setColor('rgba(0, 0, 0, 1)');
+            style.getFill().setColor('rgba(255, 0, 0, 0)');
+            style.getStroke().setColor('rgba(255, 255, 255, 1)');
+            return style;
+        },
+        declutter: true,
+        name: 'hemdLayer',
+        visible: false
+    });
+    
+    layer.on('change', function(e) {
+        $('#progress').css('display', 'none');
+    });
+    
+    return layer;
+}

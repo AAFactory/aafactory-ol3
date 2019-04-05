@@ -95,7 +95,7 @@ body {
     width: 35px;
     height: 35px;
     padding: 5px;
-    border-radius: 30px;
+    border-radius: 5px;
     background: white;
     cursor: pointer;
     display: block;
@@ -130,6 +130,7 @@ body {
 	position: fixed;
 	top: calc(100% / 2 - 80px);	
 	left: calc(100% / 2 - 80px);
+	z-index: 3;
 }
 
 #wrapper {

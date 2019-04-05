@@ -37,7 +37,7 @@ aafactory.ol3.immutable.sido = [
     {type: 2, visible: false, id: 'highway17', name: '중앙고속도로(부산-대구)', subPath: 'highway/중앙고속도로(부산-대구)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
     {type: 2, visible: false, id: 'highway18', name: '중앙고속도로(삼락-대동)', subPath: 'highway/중앙고속도로(삼락-대동)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
     {type: 2, visible: false, id: 'highway19', name: '중앙고속도로(춘천-금호)', subPath: 'highway/중앙고속도로(춘천-금호)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway20', name: '통영대전고속도로', subPath: 'highway/통영대전고속도로_EPSG4326.geojson.', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, visible: false, id: 'highway20', name: '통영대전고속도로', subPath: 'highway/통영대전고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
     {type: 2, visible: false, id: 'highway21', name: '호남고속도로', subPath: 'highway/호남고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
     {type: 2, visible: false, id: 'highway22', name: '광주대구고속도로', subPath: 'highway/광주대구고속도로.geojson', color: 'rgba(241, 170, 37, 0.9)'},
 ];

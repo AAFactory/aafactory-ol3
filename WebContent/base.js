@@ -10,7 +10,7 @@ $(function() {
             attribution : false
         }).extend([ new ol.control.ScaleLine() ]),
         target : 'map',
-        layers : [ vworldTile.base, vworldTile.midnight, vworldTile.gray, bemdLayer],
+        layers : [ vworldTile.base, vworldTile.midnight, vworldTile.gray, bemdLayer, hemdLayer],
         view : new ol.View({
             projection : aafactory.ol3.immutable.projection3857
         })
@@ -96,7 +96,7 @@ var containerResizeHandler = function() {
 /// Layer 초기화
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 var bemdLayer = aafactory.ol3.extension.createBEMDLayer();
-
+var hemdLayer = aafactory.ol3.extension.createHEMDLayer();
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // Layer박스 제어 이벤트 처리
