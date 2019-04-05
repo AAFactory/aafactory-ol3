@@ -1,0 +1,172 @@
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// Awesome Application Factory
+// openlayers custom css
+// 
+//    * icon color: 383032
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@font-face {
+    font-family: 'nanumgothic';
+    /* src: url('/nanumgothic.ttf') format('truetype') */
+    src: url('./fonts/nanumgothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nanumgothic_bold';
+    src: url('./fonts/nanumgothic_bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body { 
+    margin: 0px;
+    font-family: 'nanumgothic_bold';
+}
+
+.aaf-measure-segment {
+	border: 1px solid black;
+	background-color: white;
+	padding-left: 3px;
+	padding-right: 3px;
+	font-family: 'Gulim';
+	font-size: 9pt;
+	line-height: 19px;
+	cursor: default;
+}
+
+.aaf-measure-total {
+	margin-top: 10px;
+	margin-left: 7px;
+	border: 1px solid black;
+	background-color: white;
+	padding-left: 3px;
+	padding-right: 3px;
+	font-family: 'Gulim';
+	font-size: 9pt;
+	line-height: 19px;
+	cursor: default;
+	z-index: 8888;
+}
+
+.aaf-measure-close {
+	margin-left: 7px;
+	font-family: 'Gulim';
+	width: 16px;
+	height: 16px;
+	font-size: 9pt;
+	line-height: 19px;
+	z-index: 8888;
+	background: white;
+}
+
+.aaf-measure-close a {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	background: url('images/close-window-16.png') no-repeat top left;
+	cursor: pointer;
+	z-index: 8888;
+}
+
+.aaf-measure-move {
+	margin-left: 5px;
+	margin-top: 5px;
+	width: 100px;
+	height: 38px;
+	border: 1px solid black;
+	background-color: white;
+	padding-left: 3px;
+	padding-right: 3px;
+	font-family: 'Gulim';
+	font-size: 9pt;
+	line-height: 19px;
+	z-index: 9999;
+	cursor: default;
+}
+
+.aaf-measure-container {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.aaf-control-icon {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 30px;
+    background: white;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 3px;
+    text-align: center;
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.aaf-control-icon img {
+	width: 25px;
+    height: 25px;
+    margin-top: 3px;
+}
+
+.aaf-control-index-top {
+	z-index: 999;
+}
+
+#layerBox {
+	background: white;
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 20px;
+}
+
+#progress {
+	display: none;
+	position: fixed;
+	top: calc(100% / 2 - 80px);	
+	left: calc(100% / 2 - 80px);
+}
+
+#wrapper {
+	width: 100%;
+	position: fixed;
+	bottom: 5px;
+}
+
+#listView {
+	background: white;
+	position: fixed;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	z-index: 2;
+	opacity: 0.9;
+	display: none;
+	overflow: auto;
+}
+
+.card {
+	display: inline-block;
+	width: calc(100% / 2 - 35px);
+	background-color: rgba(96, 96, 105, 1);
+	padding: 15px;
+	border-radius: 3px;
+	color: white;	
+	cursor: pointer;
+	font-size: 15px;
+	margin-top: 5px;
+}
+
+.dynamicDiv {
+	margin-right: 5px;
+}
+
+.layer-on {
+	background-color: rgba(0, 0, 255, 1);
+}
+
