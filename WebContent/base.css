@@ -24,6 +24,11 @@ body {
     font-family: 'nanumgothic_bold';
 }
 
+#map {
+	width: 200px;
+	height: 200px;	
+}
+
 .aaf-measure-segment {
 	border: 1px solid black;
 	background-color: white;
@@ -135,7 +140,7 @@ body {
 
 #wrapper {
 	width: 100%;
-	position: fixed;
+	position: absolute;
 	bottom: 5px;
 }
 

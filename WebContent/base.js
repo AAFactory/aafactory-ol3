@@ -7,7 +7,8 @@ $(function() {
     // 지도객체 초기화
     map = new ol.Map({
         controls : ol.control.defaults({
-            attribution : false
+            attribution : false,
+            rotate: false
         }).extend([ new ol.control.ScaleLine() ]),
         target : 'map',
         layers : [ vworldTile.base, vworldTile.midnight, vworldTile.gray, bemdLayer, hemdLayer],
@@ -18,7 +19,7 @@ $(function() {
     
     // control 추가
     new aafactory.ol3.control.LayerControl().setMap(map);
-    aafactory.ol3.extension.mousePositionControl.setMap(map);
+//    aafactory.ol3.extension.mousePositionControl.setMap(map);
     
     // 마우스클릭 애니메이션 추가
     new aafactory.ol3.extension.MouseAnimation().setMap(map);
@@ -27,7 +28,7 @@ $(function() {
     map.getView().fit([14083957.251601951, 4424311.245778092, 14231974.715348352, 4619246.481197673], map.getSize());
     
     // view event handler
-    map.getView().on('change:resolution', aafactory.ol3.extension.resolutionChangeHandler);
+//    map.getView().on('change:resolution', aafactory.ol3.extension.resolutionChangeHandler);
     map.getView().on('propertychange', function(e) { 
         var degree = (map.getView().getRotation() * 57.2);
          $('.aaf-map-rotate').css({'transform' : 'rotate('+ degree +'deg)'});
@@ -52,7 +53,6 @@ $(function() {
     
     // resize event handler
     $(window).resize(containerResizeHandler);
-    containerResizeHandler();
     
     // 레이어추가
     var container = document.getElementById('layerBox');
@@ -80,13 +80,15 @@ $(function() {
     })
     
     bindLayerEvent();
+    containerResizeHandler();
 });
 
 var containerResizeHandler = function() {
     var w = $(window).width();
     var h = $(window).height();
-    $('#map').width(w);
+    console.log(w)
     $('#map').height(h);
+    $('#map').css('width','100%');
     $('#listView').height(h);
     map.updateSize();
 }
