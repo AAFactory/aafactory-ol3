@@ -39,17 +39,17 @@ $(function() {
         source : new ol.source.Vector()
     }); 
     sectorLayer.setMap(map);
-    map.on('singleclick', function(evt) {
-        var center = turf.point(ol.proj.transform(map.getCoordinateFromPixel(evt.pixel), 'EPSG:3857', 'EPSG:4326'));
-        var radius = 5;
-        var bearing1 = 25;
-        var bearing2 = 45;
-        var sector = turf.sector(center, radius, bearing1, bearing2);
-        var features = new ol.format.GeoJSON().readFeatures(sector,{ dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-        var feature = features[0];
-        //feature.getGeometry().transform('EPSG:4326', 'EPSG:3857')
-        sectorLayer.getSource().addFeature(feature);
-    });
+//    map.on('singleclick', function(evt) {
+//        var center = turf.point(ol.proj.transform(map.getCoordinateFromPixel(evt.pixel), 'EPSG:3857', 'EPSG:4326'));
+//        var radius = 5;
+//        var bearing1 = 25;
+//        var bearing2 = 45;
+//        var sector = turf.sector(center, radius, bearing1, bearing2);
+//        var features = new ol.format.GeoJSON().readFeatures(sector,{ dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+//        var feature = features[0];
+//        //feature.getGeometry().transform('EPSG:4326', 'EPSG:3857')
+//        sectorLayer.getSource().addFeature(feature);
+//    });
     
     // resize event handler
     $(window).resize(containerResizeHandler);

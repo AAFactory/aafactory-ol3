@@ -18,7 +18,7 @@ aafactory.ol3.immutable.projection3857 = new ol.proj.Projection({
 aafactory.ol3.immutable.sido = [
     {type: 1, id: 'sidoLayer1', name: '서울', subPath: 'sido/11.geojson'},
     {type: 1, id: 'sidoLayer9', name: '경기도', subPath: 'sido/41.geojson'},
-    {type: 2, visible: true, id: 'highway1', name: '경부고속도로', subPath: 'highway/경부고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, visible: true, id: 'highway1', name: '경부고속도로', subPath: 'highway/경부고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.6)'},
     {type: 2, visible: false, id: 'highway2', name: '경인고속도로', subPath: 'highway/경인고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
     {type: 2, visible: false, id: 'highway3', name: '광주원주고속도로', subPath: 'highway/광주원주고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
     {type: 2, visible: false, id: 'highway4', name: '동해고속도로(부산-울산)', subPath: 'highway/동해고속도로(부산-울산)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
@@ -40,6 +40,9 @@ aafactory.ol3.immutable.sido = [
     {type: 2, visible: false, id: 'highway20', name: '통영대전고속도로', subPath: 'highway/통영대전고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
     {type: 2, visible: false, id: 'highway21', name: '호남고속도로', subPath: 'highway/호남고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
     {type: 2, visible: false, id: 'highway22', name: '광주대구고속도로', subPath: 'highway/광주대구고속도로.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, visible: false, id: 'precision20400xxxxx', name: '20400xxxxx', subPath: 'precision/20400xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
+    {type: 2, visible: false, id: 'precision20401xxxxx', name: '20401xxxxx', subPath: 'precision/20401xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
+    {type: 2, visible: false, id: 'precision20500xxxxx', name: '20500xxxxx', subPath: 'precision/20500xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
 ];
 
 aafactory.ol3.immutable.vworldTile = {
@@ -92,7 +95,13 @@ aafactory.ol3.immutable.roadStyle = [
                 width: 3
             })
         })
-    })
+    }),
+    new ol.style.Style({
+        stroke: new ol.style.Stroke({
+            color: 'rgba(255, 255, 255, 0.5)',
+            width: 3
+        })
+    }),
 ];
 
 aafactory.ol3.immutable.boundaryStyle = new ol.style.Style({

@@ -103,8 +103,17 @@ aafactory.ol3.extension.createRoadLayer = function(geoJsonName, name, color, vis
             format: new ol.format.GeoJSON()
         }),
         style: function(feature) {
-            roadStyle[1].getText().setText(feature.get('ROAD_NAME'));
             roadStyle[0].getStroke().setColor(color);
+            if (feature.get('ROAD_NAME')) {
+                roadStyle[1].getText().setText(feature.get('ROAD_NAME'));
+            }
+            if (map.getView().getResolution() < 3) {
+                roadStyle[0].getStroke().setWidth(12 / map.getView().getResolution());
+                roadStyle[2].getStroke().setWidth(10 / map.getView().getResolution());
+            } else {
+                roadStyle[0].getStroke().setWidth(5);
+                roadStyle[2].getStroke().setWidth(3);
+            }
             return roadStyle;
         },
         declutter: true,
