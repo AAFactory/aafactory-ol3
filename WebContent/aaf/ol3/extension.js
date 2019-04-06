@@ -74,7 +74,7 @@ aafactory.ol3.extension.mousePositionControl = new ol.control.MousePosition({
     undefinedHTML : '&nbsp;'
 });
 
-aafactory.ol3.extension.createSDLayer = function(geoJsonName, name) {
+aafactory.ol3.extension.createSDLayer = function(geoJsonName, name, visible) {
     var style = aafactory.ol3.immutable.boundaryStyle;
     var layer = new ol.layer.Vector({
         source: new ol.source.Vector({
@@ -89,6 +89,7 @@ aafactory.ol3.extension.createSDLayer = function(geoJsonName, name) {
             style.getStroke().setColor('rgba(0, 0, 255, 0.8)');
             return style;
         },
+        visible: visible,
         declutter: true,
         name: name
     });
@@ -107,7 +108,7 @@ aafactory.ol3.extension.createRoadLayer = function(geoJsonName, name, color, vis
             if (feature.get('ROAD_NAME')) {
                 roadStyle[1].getText().setText(feature.get('ROAD_NAME'));
             }
-            if (map.getView().getResolution() < 3) {
+            if (map.getView().getResolution() < 5) {
                 roadStyle[0].getStroke().setWidth(12 / map.getView().getResolution());
                 roadStyle[2].getStroke().setWidth(10 / map.getView().getResolution());
             } else {

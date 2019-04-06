@@ -62,16 +62,16 @@ $(function() {
         div.id = item.id;
         div.innerHTML = item.name;
         if (previousType != item.type) container.appendChild(document.createElement('hr'));
+
+        if (item.visible) {
+            div.className = "card layer-on dynamicDiv";
+        } else {
+            div.className = "card dynamicDiv";
+        }
         
         if (item.type == 1) {
-            div.className = "card layer-on dynamicDiv";
-            map.addLayer(aafactory.ol3.extension.createSDLayer(item.subPath, item.id));    
+            map.addLayer(aafactory.ol3.extension.createSDLayer(item.subPath, item.id, item.visible));    
         } else {
-            if (item.visible) {
-                div.className = "card layer-on dynamicDiv";
-            } else {
-                div.className = "card dynamicDiv";
-            }
             map.addLayer(aafactory.ol3.extension.createRoadLayer(item.subPath, item.id, item.color, item.visible));
         }
         

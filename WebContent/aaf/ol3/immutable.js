@@ -16,15 +16,15 @@ aafactory.ol3.immutable.projection3857 = new ol.proj.Projection({
 });
 
 aafactory.ol3.immutable.sido = [
-    {type: 1, id: 'sidoLayer1', name: '서울', subPath: 'sido/11.geojson'},
-    {type: 1, id: 'sidoLayer9', name: '경기도', subPath: 'sido/41.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer1', name: '서울', subPath: 'sido/11.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer9', name: '경기도', subPath: 'sido/41.geojson'},
     {type: 2, visible: true, id: 'highway1', name: '경부고속도로', subPath: 'highway/경부고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.6)'},
     {type: 2, visible: false, id: 'highway2', name: '경인고속도로', subPath: 'highway/경인고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
     {type: 2, visible: false, id: 'highway3', name: '광주원주고속도로', subPath: 'highway/광주원주고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
     {type: 2, visible: false, id: 'highway4', name: '동해고속도로(부산-울산)', subPath: 'highway/동해고속도로(부산-울산)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
     {type: 2, visible: false, id: 'highway5', name: '동해고속도로(삼척-속초)', subPath: 'highway/동해고속도로(삼척-속초)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
     {type: 2, visible: false, id: 'highway6', name: '동해고속도로(울산-포항)', subPath: 'highway/동해고속도로(울산-포항)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway7', name: '서울양양고속도로', subPath: 'highway/서울양양고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
+    {type: 2, visible: true, id: 'highway7', name: '서울양양고속도로', subPath: 'highway/서울양양고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
     {type: 2, visible: false, id: 'highway8', name: '서해안고속도로', subPath: 'highway/서해안고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
     {type: 2, visible: false, id: 'highway9', name: '세종포천고속도로(구리-포천)', subPath: 'highway/세종포천고속도로(구리-포천)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
     {type: 2, visible: false, id: 'highway10', name: '제2경인고속도로(안양-성남)', subPath: 'highway/영동고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
@@ -43,6 +43,13 @@ aafactory.ol3.immutable.sido = [
     {type: 2, visible: false, id: 'precision20400xxxxx', name: '20400xxxxx', subPath: 'precision/20400xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
     {type: 2, visible: false, id: 'precision20401xxxxx', name: '20401xxxxx', subPath: 'precision/20401xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
     {type: 2, visible: false, id: 'precision20500xxxxx', name: '20500xxxxx', subPath: 'precision/20500xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
+    {type: 2, visible: false, id: 'precision20601xxxxx', name: '20601xxxxx', subPath: 'precision/20601xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
+    {type: 2, visible: false, id: 'precision20602xxxxx', name: '20602xxxxx', subPath: 'precision/20602xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
+    {type: 2, visible: false, id: 'precision23400xxxxx', name: '23400xxxxx', subPath: 'precision/23400xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
+    {type: 2, visible: false, id: 'precision23401xxxxx', name: '23401xxxxx', subPath: 'precision/23401xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
+    {type: 2, visible: false, id: 'precision23402xxxxx', name: '23402xxxxx', subPath: 'precision/23402xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
+    {type: 2, visible: false, id: 'precision23403xxxxx', name: '23403xxxxx', subPath: 'precision/23403xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
+    {type: 2, visible: false, id: 'precision23404xxxxx', name: '23404xxxxx', subPath: 'precision/23404xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
 ];
 
 aafactory.ol3.immutable.vworldTile = {
@@ -85,9 +92,9 @@ aafactory.ol3.immutable.roadStyle = [
             fill: new ol.style.Fill({
                 color: '#000'
             }),
-            overflow: false,
+            overflow: true,
             maxangle: 30,
-            placement : 'line',
+            /*placement : 'line',*/
             align: 'center',
             textBaseline: 'bottom',
             stroke: new ol.style.Stroke({
