@@ -21,13 +21,13 @@ aafactory.ol3.control.LayerControl = function(opt_options) {
     container.appendChild(rotateIconDiv);
     container.appendChild(listViewIconDiv);
     
-    ol.events.listen(rotateIconDiv, 'click', function() {
+    rotateIconDiv.addEventListener('click', function() {
         this.getMap().getView().setRotation(0);
-    }, this, false);
-     
-    ol.events.listen(listViewIconDiv, 'click', function() {
+    }.bind(this), false);
+    
+    listViewIconDiv.addEventListener('click', function() {
         $('#listView').toggle();
-    }, this, false);
+    }.bind(this), false);
     
     ol.control.Control.call(this, {element: container, target: null});
     document.addEventListener('contextmenu', function(event) { event.preventDefault() });

@@ -5,14 +5,14 @@ aafactory.ol3.extension.MouseAnimation = function() {
     var start;
     
     this.setMap = function(map) {
-        ol.events.listen(map, ol.pointer.EventType.POINTERUP, function(e) {
+        map.on('pointerdown', function(e) {
             var geom = new ol.geom.Point(map.getCoordinateFromPixel(e.pixel));
             feature = new ol.Feature(geom);
             this.flash();
-        }, this, false)
+        }.bind(this))
     }
     
-    this.flash = function(feature) {
+    this.flash = function() {
         start = new Date().getTime();
         listenerKey = map.on('postcompose', this.animate);
         map.render();
@@ -176,5 +176,24 @@ aafactory.ol3.extension.createHEMDLayer = function() {
         $('#progress').css('display', 'none');
     });
     
+    return layer;
+}
+
+aafactory.ol3.extension.createBuildingLayer = function(geoJsonName, name, visible) {
+    var buildingStyle = aafactory.ol3.immutable.buildingStyle;
+    var layer = new ol.layer.Vector({
+        source: new ol.source.Vector({
+            url: 'geojson/' + geoJsonName,
+            format: new ol.format.GeoJSON()
+        }),
+        style: function(feature) {
+            buildingStyle.getText().setText(feature.get('BULD_NM'));
+            buildingStyle.getFill().setColor('rgba(255, 255, 255, 1)');
+            return buildingStyle;
+        },
+        declutter: true,
+        name: name
+    });
+    layer.setVisible(visible);
     return layer;
 }

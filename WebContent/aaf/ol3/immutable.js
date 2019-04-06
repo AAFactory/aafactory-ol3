@@ -18,38 +18,56 @@ aafactory.ol3.immutable.projection3857 = new ol.proj.Projection({
 aafactory.ol3.immutable.sido = [
     {type: 1, visible: false, id: 'sidoLayer1', name: '서울', subPath: 'sido/11.geojson'},
     {type: 1, visible: false, id: 'sidoLayer9', name: '경기도', subPath: 'sido/41.geojson'},
-    {type: 2, visible: true, id: 'highway1', name: '경부고속도로', subPath: 'highway/경부고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.6)'},
-    {type: 2, visible: false, id: 'highway2', name: '경인고속도로', subPath: 'highway/경인고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway3', name: '광주원주고속도로', subPath: 'highway/광주원주고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway4', name: '동해고속도로(부산-울산)', subPath: 'highway/동해고속도로(부산-울산)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway5', name: '동해고속도로(삼척-속초)', subPath: 'highway/동해고속도로(삼척-속초)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway6', name: '동해고속도로(울산-포항)', subPath: 'highway/동해고속도로(울산-포항)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: true, id: 'highway7', name: '서울양양고속도로', subPath: 'highway/서울양양고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway8', name: '서해안고속도로', subPath: 'highway/서해안고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway9', name: '세종포천고속도로(구리-포천)', subPath: 'highway/세종포천고속도로(구리-포천)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway10', name: '제2경인고속도로(안양-성남)', subPath: 'highway/영동고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway11', name: '영동고속도로', subPath: 'highway/영동고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway12', name: '제2경인고속도로(인천대교)', subPath: 'highway/제2경인고속도로(인천대교)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway13', name: '제2중부고속도로', subPath: 'highway/제2중부고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway14', name: '중부고속도로', subPath: 'highway/중부고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway15', name: '중부내륙고속도로', subPath: 'highway/중부내륙고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway16', name: '중부내륙고속도로지선', subPath: 'highway/중부내륙고속도로지선_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway17', name: '중앙고속도로(부산-대구)', subPath: 'highway/중앙고속도로(부산-대구)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway18', name: '중앙고속도로(삼락-대동)', subPath: 'highway/중앙고속도로(삼락-대동)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway19', name: '중앙고속도로(춘천-금호)', subPath: 'highway/중앙고속도로(춘천-금호)_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway20', name: '통영대전고속도로', subPath: 'highway/통영대전고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway21', name: '호남고속도로', subPath: 'highway/호남고속도로_EPSG4326.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'highway22', name: '광주대구고속도로', subPath: 'highway/광주대구고속도로.geojson', color: 'rgba(241, 170, 37, 0.9)'},
-    {type: 2, visible: false, id: 'precision20400xxxxx', name: '20400xxxxx', subPath: 'precision/20400xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
-    {type: 2, visible: false, id: 'precision20401xxxxx', name: '20401xxxxx', subPath: 'precision/20401xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
-    {type: 2, visible: false, id: 'precision20500xxxxx', name: '20500xxxxx', subPath: 'precision/20500xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
-    {type: 2, visible: false, id: 'precision20601xxxxx', name: '20601xxxxx', subPath: 'precision/20601xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
-    {type: 2, visible: false, id: 'precision20602xxxxx', name: '20602xxxxx', subPath: 'precision/20602xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
-    {type: 2, visible: false, id: 'precision23400xxxxx', name: '23400xxxxx', subPath: 'precision/23400xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
-    {type: 2, visible: false, id: 'precision23401xxxxx', name: '23401xxxxx', subPath: 'precision/23401xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
-    {type: 2, visible: false, id: 'precision23402xxxxx', name: '23402xxxxx', subPath: 'precision/23402xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
-    {type: 2, visible: false, id: 'precision23403xxxxx', name: '23403xxxxx', subPath: 'precision/23403xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
-    {type: 2, visible: false, id: 'precision23404xxxxx', name: '23404xxxxx', subPath: 'precision/23404xxxxx.geojson', color: 'rgba(241, 170, 37, 0.6)'},
+    {type: 2, visible: true,  color: 'rgba(241, 170, 37, 0.6)', id: 'highway1', name: '경부고속도로', subPath: 'highway/경부고속도로_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway2', name: '경인고속도로', subPath: 'highway/경인고속도로_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway3', name: '광주원주고속도로', subPath: 'highway/광주원주고속도로_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway4', name: '동해고속도로(부산-울산)', subPath: 'highway/동해고속도로(부산-울산)_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway5', name: '동해고속도로(삼척-속초)', subPath: 'highway/동해고속도로(삼척-속초)_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway6', name: '동해고속도로(울산-포항)', subPath: 'highway/동해고속도로(울산-포항)_EPSG4326.geojson'},
+    {type: 2, visible: true,  color: 'rgba(241, 170, 37, 0.6)', id: 'highway7', name: '서울양양고속도로', subPath: 'highway/서울양양고속도로_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway8', name: '서해안고속도로', subPath: 'highway/서해안고속도로_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway9', name: '세종포천고속도로(구리-포천)', subPath: 'highway/세종포천고속도로(구리-포천)_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway10', name: '제2경인고속도로(안양-성남)', subPath: 'highway/영동고속도로_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway11', name: '영동고속도로', subPath: 'highway/영동고속도로_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway12', name: '제2경인고속도로(인천대교)', subPath: 'highway/제2경인고속도로(인천대교)_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway13', name: '제2중부고속도로', subPath: 'highway/제2중부고속도로_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway14', name: '중부고속도로', subPath: 'highway/중부고속도로_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway15', name: '중부내륙고속도로', subPath: 'highway/중부내륙고속도로_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway16', name: '중부내륙고속도로지선', subPath: 'highway/중부내륙고속도로지선_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway17', name: '중앙고속도로(부산-대구)', subPath: 'highway/중앙고속도로(부산-대구)_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway18', name: '중앙고속도로(삼락-대동)', subPath: 'highway/중앙고속도로(삼락-대동)_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway19', name: '중앙고속도로(춘천-금호)', subPath: 'highway/중앙고속도로(춘천-금호)_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway20', name: '통영대전고속도로', subPath: 'highway/통영대전고속도로_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway21', name: '호남고속도로', subPath: 'highway/호남고속도로_EPSG4326.geojson'},
+    {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway22', name: '광주대구고속도로', subPath: 'highway/광주대구고속도로.geojson'},
+    {type: 3, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'nRoad1', name: '내부순환로', subPath: 'nationalroad/내부순환로_EPSG4326.geojson'},
+    {type: 3, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'nRoad2', name: '분당수서간도시고속화도로', subPath: 'nationalroad/분당수서간도시고속화도로_EPSG4326.geojson'},
+    /*{type: 3, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'nRoad4', name: '국도1호선', subPath: 'nationalroad/국도1호선.geojson'},
+    {type: 3, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'nRoad5', name: '국도2호선', subPath: 'nationalroad/국도2호선.geojson'},
+    {type: 3, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'nRoad6', name: '국도3호선', subPath: 'nationalroad/국도3호선.geojson'},
+    {type: 3, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'nRoad7', name: '분당내곡간도시고속화도로', subPath: 'nationalroad/분당내곡간도시고속화도로.geojson'},
+    {type: 3, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'nRoad8', name: '국도4호선', subPath: 'nationalroad/국도4호선.geojson'},
+    {type: 3, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'nRoad9', name: '국도6호선', subPath: 'nationalroad/국도6호선.geojson'},
+    {type: 3, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'nRoad10', name: '국도7호선', subPath: 'nationalroad/국도7호선.geojson'},
+    {type: 3, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'nRoad11', name: '동부간선도로', subPath: 'nationalroad/동부간선도로.geojson'},
+    {type: 3, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'nRoad12', name: '올림픽대로', subPath: 'nationalroad/올림픽대로.geojson'},*/
+    {type: 4, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'precision1', name: '평택제천고속도', subPath: 'precision/평택제천고속도.geojson', color: 'rgba(241, 170, 37, 0.6)'},
+    {type: 4, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'precision2', name: '서울외곽순환고속도로', subPath: 'precision/서울외곽순환고속도로.geojson'},
+    {type: 4, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'precision3', name: '성남대로', subPath: 'precision/성남대로.geojson'},
+    {type: 4, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'precision4', name: '헌릉로', subPath: 'precision/헌릉로.geojson'},
+    {type: 4, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'precision5', name: '일반국도3호선', subPath: 'precision/일반국도3호선.geojson'},
+    {type: 4, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'precision6', name: '동부간선도로', subPath: 'precision/동부간선도로.geojson'},
+    {type: 4, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'precision20400xxxxx', name: '20400xxxxx', subPath: 'precision/20400xxxxx.geojson'},
+    {type: 4, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'precision20401xxxxx', name: '20401xxxxx', subPath: 'precision/20401xxxxx.geojson'},
+    {type: 4, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'precision20500xxxxx', name: '20500xxxxx', subPath: 'precision/20500xxxxx.geojson'},
+    {type: 4, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'precision20601xxxxx', name: '20601xxxxx', subPath: 'precision/20601xxxxx.geojson'},
+    {type: 4, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'precision20602xxxxx', name: '20602xxxxx', subPath: 'precision/20602xxxxx.geojson'},
+    {type: 4, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'precision23400xxxxx', name: '23400xxxxx', subPath: 'precision/23400xxxxx.geojson'},
+    {type: 4, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'precision23401xxxxx', name: '23401xxxxx', subPath: 'precision/23401xxxxx.geojson'},
+    {type: 4, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'precision23402xxxxx', name: '23402xxxxx', subPath: 'precision/23402xxxxx.geojson'},
+    {type: 4, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'precision23403xxxxx', name: '23403xxxxx', subPath: 'precision/23403xxxxx.geojson'},
+    {type: 4, visible: false, color: 'rgba(255, 0, 0, 0.6)', id: 'precision23404xxxxx', name: '23404xxxxx', subPath: 'precision/23404xxxxx.geojson'},
+    {type: 5, visible: false, id: 'railway_station', name: '지하철역', subPath: 'buildings/railway_station.geojson'},
 ];
 
 aafactory.ol3.immutable.vworldTile = {
@@ -94,7 +112,7 @@ aafactory.ol3.immutable.roadStyle = [
             }),
             overflow: true,
             maxangle: 30,
-            /*placement : 'line',*/
+            placement : 'line',
             align: 'center',
             textBaseline: 'bottom',
             stroke: new ol.style.Stroke({
@@ -210,3 +228,24 @@ aafactory.ol3.immutable.style = {
             })
         }) ]
 };
+
+aafactory.ol3.immutable.buildingStyle = new ol.style.Style({
+    fill: new ol.style.Fill({
+        color: 'rgba(255, 255, 255, 0.8)'
+    }),
+    stroke: new ol.style.Stroke({
+        color: '#000000',
+        width: 1
+    }),
+    text: new ol.style.Text({
+        font: '12px Calibri,sans-serif',
+        fill: new ol.style.Fill({
+            color: '#000'
+        }),
+        stroke: new ol.style.Stroke({
+            color: '#fff',
+            width: 3
+        }),
+        overflow: true,
+    })
+});

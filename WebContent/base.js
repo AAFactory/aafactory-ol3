@@ -71,8 +71,10 @@ $(function() {
         
         if (item.type == 1) {
             map.addLayer(aafactory.ol3.extension.createSDLayer(item.subPath, item.id, item.visible));    
-        } else {
+        } else if (item.type == 2 || item.type == 3 || item.type == 4) {
             map.addLayer(aafactory.ol3.extension.createRoadLayer(item.subPath, item.id, item.color, item.visible));
+        } else if (item.type == 5) {
+            map.addLayer(aafactory.ol3.extension.createBuildingLayer(item.subPath, item.id, item.visible));
         }
         
         container.appendChild(div);
