@@ -70,7 +70,7 @@ $(function() {
         }
         
         if (item.type == 1) {
-            map.addLayer(aafactory.ol3.extension.createSDLayer(item.subPath, item.id, item.visible));    
+            map.addLayer(aafactory.ol3.extension.createSGGLayer(item.subPath, item.id, item.visible));    
         } else if (item.type == 2 || item.type == 3 || item.type == 4) {
             map.addLayer(aafactory.ol3.extension.createRoadLayer(item.subPath, item.id, item.color, item.visible));
         } else if (item.type == 5) {
@@ -127,7 +127,10 @@ var bindLayerEvent = function() {
                             $('#progress').css('display', 'block');
                             item.on('change', function(e) {
                                 $('#progress').css('display', 'none');
+                                map.getView().fit(item.getSource().getExtent(), map.getSize());
                             });
+                        } else {
+                            map.getView().fit(item.getSource().getExtent(), map.getSize());
                         }
                     }
                     $target.addClass('layer-on');

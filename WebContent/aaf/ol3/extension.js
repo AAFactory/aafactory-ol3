@@ -96,6 +96,29 @@ aafactory.ol3.extension.createSDLayer = function(geoJsonName, name, visible) {
     return layer;
 }
 
+aafactory.ol3.extension.createSGGLayer = function(geoJsonName, name, visible) {
+    var style = aafactory.ol3.immutable.boundaryStyle;
+    var layer = new ol.layer.Vector({
+        source: new ol.source.Vector({
+            url: 'geojson/' + geoJsonName,
+            format: new ol.format.GeoJSON()
+        }),
+        style: function(feature) {
+            style.getText().setText(feature.get('SIG_KOR_NM'));
+            style.getText().getStroke().setColor('rgba(0, 0, 255, 1)');
+            style.getText().getFill().setColor('rgba(255, 255, 255, 1)');
+            style.getFill().setColor('rgba(0, 0, 255, 0)');
+            style.getStroke().setColor('rgba(0, 0, 255, 1)');
+            style.getStroke().setWidth(1);
+            return style;
+        },
+        visible: visible,
+        declutter: true,
+        name: name
+    });
+    return layer;
+}
+
 aafactory.ol3.extension.createRoadLayer = function(geoJsonName, name, color, visible) {
     var roadStyle = aafactory.ol3.immutable.roadStyle;
     var layer = new ol.layer.Vector({
@@ -134,9 +157,12 @@ aafactory.ol3.extension.createBEMDLayer = function() {
         style: function(feature) {
             style.getText().setText(feature.get('EMD_KOR_NM'));
             style.getText().getStroke().setColor('rgba(255, 255, 255, 1)');
-            style.getText().getFill().setColor('rgba(0, 0, 0, 1)');
+            style.getText().getFill().setColor('rgba(0, 0, 255, 1)');
             style.getFill().setColor('rgba(255, 0, 0, 0)');
-            style.getStroke().setColor('rgba(255, 255, 255, 1)');
+            style.getStroke().setColor('rgba(41, 113, 227, 1)');
+            var width = 12 / map.getView().getResolution();
+            width = width >= 1 ? width : 1;
+            style.getStroke().setWidth(width);
             return style;
         },
         declutter: true,

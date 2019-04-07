@@ -16,8 +16,23 @@ aafactory.ol3.immutable.projection3857 = new ol.proj.Projection({
 });
 
 aafactory.ol3.immutable.sido = [
-    {type: 1, visible: false, id: 'sidoLayer1', name: '서울', subPath: 'sido/11.geojson'},
-    {type: 1, visible: false, id: 'sidoLayer9', name: '경기도', subPath: 'sido/41.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer1', name: '서울', subPath: 'sgg/11xxx.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer2', name: '부산광역시', subPath: 'sgg/26xxx.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer3', name: '대구광역시', subPath: 'sgg/27xxx.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer4', name: '인천광역시', subPath: 'sgg/28xxx.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer5', name: '광주광역시', subPath: 'sgg/29xxx.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer6', name: '대전광역시', subPath: 'sgg/30xxx.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer7', name: '울산광역시', subPath: 'sgg/31xxx.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer8', name: '세종특별자치시', subPath: 'sgg/36xxx.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer9', name: '경기도', subPath: 'sgg/41xxx.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer10', name: '강원도', subPath: 'sgg/42xxx.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer11', name: '충청북도', subPath: 'sgg/43xxx.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer12', name: '충청남도', subPath: 'sgg/44xxx.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer13', name: '전라북도', subPath: 'sgg/45xxx.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer14', name: '전라남도', subPath: 'sgg/46xxx.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer15', name: '경상북도', subPath: 'sgg/47xxx.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer16', name: '경상남도', subPath: 'sgg/48xxx.geojson'},
+    {type: 1, visible: false, id: 'sidoLayer17', name: '제주특별자치도', subPath: 'sgg/50xxx.geojson'},
     {type: 2, visible: true,  color: 'rgba(241, 170, 37, 0.6)', id: 'highway1', name: '경부고속도로', subPath: 'highway/경부고속도로_EPSG4326.geojson'},
     {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway2', name: '경인고속도로', subPath: 'highway/경인고속도로_EPSG4326.geojson'},
     {type: 2, visible: false, color: 'rgba(241, 170, 37, 0.6)', id: 'highway3', name: '광주원주고속도로', subPath: 'highway/광주원주고속도로_EPSG4326.geojson'},
@@ -135,15 +150,15 @@ aafactory.ol3.immutable.boundaryStyle = new ol.style.Style({
     }),
     stroke: new ol.style.Stroke({
         color: '#000000',
-        width: 2
+        width: 5
     }),
     text: new ol.style.Text({
-        font: '15px nanumgothic_bold',
+        font: '12px nanumgothic_bold',
         fill: new ol.style.Fill({
             color: '#000'
         }),
         stroke: new ol.style.Stroke({
-            color: '#fff',
+            color: 'rgba(0, 0, 255, 1)',
             width: 3
         }),
         overflow: false,
