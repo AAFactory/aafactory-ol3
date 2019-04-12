@@ -95,6 +95,12 @@ var containerResizeHandler = function() {
     map.updateSize();
 }
 
+var fitByFeatureBound = function(source, layerName) {
+    if (layerName != 'bemdLayer' && layerName != 'hemdLayer') {
+        map.getView().fit(source.getExtent(), map.getSize());
+    }
+}
+
 
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /// Layer 초기화
@@ -127,10 +133,10 @@ var bindLayerEvent = function() {
                             $('#progress').css('display', 'block');
                             item.on('change', function(e) {
                                 $('#progress').css('display', 'none');
-                                map.getView().fit(item.getSource().getExtent(), map.getSize());
+                                fitByFeatureBound(item.getSource(), layerName);
                             });
                         } else {
-                            map.getView().fit(item.getSource().getExtent(), map.getSize());
+                            fitByFeatureBound(item.getSource(), layerName);
                         }
                     }
                     $target.addClass('layer-on');
